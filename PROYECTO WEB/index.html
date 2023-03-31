@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Shoppy - Categorías</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./scripts.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="row" id="barra-titulo">
+      <div id="titulo">
+        <h1 class="col" id="tamañotit">HOLY SHOPPY</h1>
+        <div class="logo">
+          <div><img src="./img/bolsaicono.png" alt="bolsita" id="bolsita" width="100" padding="10">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row" id="navbar">
+      <nav class="navbar navbar-light" style="background-color: #fffb80;">
+        <button type="button" class="btn btn-primary" id="botonNavPrim">Menú</button>
+        <button type="button" class="btn btn-secondary" id="botonNavSec">Categorías</button>
+        <button type="button" class="btn btn-primary" id="botonNavPrim">Promociones</button>
+        <button type="button" class="btn btn-secondary" id="botonNavSec">Contactos</button>
+      </nav>
+    </div>
+
+
+
+    <div class="container" id="carrusel">
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="6000">
+            <img src="./img/car1.jfif" class="d-block w-100" id="imagen" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="./img/car2.jfif" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="./img/car3.jfif" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div id="InicioSesion">
+      <form class="col-sm-12">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

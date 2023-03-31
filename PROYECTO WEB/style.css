@@ -1,0 +1,123 @@
+@font-face {
+    font-family: val;
+    src: url(./fuente/VAL.otf);
+}
+
+body{
+    background-color: rgba(119, 246, 204, 0.603);
+    display: flex;
+    min-width: 300px;
+}
+
+#barra-titulo{
+    background-color: rgba(255,189,89,255);
+    height: max-content;
+    border-style: solid;
+    border-width: 15px 0px 40px 0px;
+    border-color:rgba(255,189,89,255);
+
+
+}
+
+#titulo{
+    color: rgba(30,150,118,255);
+    font-family: val;
+    display: flex;
+    min-width: 300px;
+    text-shadow: 5px 4px rgba(251, 251, 69, 0.84);
+    float: left;
+}
+
+
+#tamañotit{
+    text-align: center;
+    position: relative;
+    top: 40px;
+    font-size: 350%;
+}
+
+.logo{
+    position: fixed;
+    right: 15%;
+    width: 5%;
+}
+
+.logo #bolsita{
+    opacity: 80%;
+    float: right;
+    border: 5px solid black;
+}
+
+#navbar{
+    background-color: rgba(255,254,138,255);
+    color: rgba(255,254,138,255);
+}
+
+@media (max-width: 675px) {
+        .logo #bolsita {
+            display: none;
+        }
+}
+
+#carrusel{
+    border-style: solid;
+    border-width: 30px;
+    border-radius: 40px;
+    width: 45%;
+    float: left;
+    display: flex;
+    position: absolute;
+    bottom: 21.8%;
+    padding: auto;
+}
+.carousel-item img{
+    width: 20vw;
+    height: 46vh;
+    vertical-align: middle;
+    object-fit: cover;
+    display: flex;
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-header {
+      float: none;
+    }
+    .navbar-toggle {
+      display: block;
+    }
+    .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+      display: none!important;
+    }
+    .navbar-nav {
+      float: none!important;
+      margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+      float: none;
+    }
+    .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+#InicioSesion{
+
+    block-size: 54%;
+    border-style: solid;
+    border-width: 30px;
+    border-radius: 30px;
+    border-color: yellowgreen;
+    background-color: yellowgreen;
+    float: right;
+    position: absolute;
+    left: 50%;
+    top: 22.7%;
+    padding-top: 6%;
+    padding-right: 5%;
+}
