@@ -7,3 +7,11 @@ button.addEventListener("click", () => {
   // Alternar la clase "show" en el menú de navegación
   menu.classList.toggle("show");
 });
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
