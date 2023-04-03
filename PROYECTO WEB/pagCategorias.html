@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Holy Shoppy</title>
+  <title>Holy Shoppy - Categorías</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
-  <script src = "./scripts.js"></script>
+  <link rel="stylesheet" href="./styleCat.css">
+  <script src="./scripts.js"></script>
 </head>
 
 <body>
+  <div class="container-fluid">
+
   <!-- BARRA NAVEGACION LATERAL (PANTALLAS MAS PEQUEÑAS) -->
   <div class="container-fluid">
     <div id="mySidenav" class="sidenav" style="background-color: rgb(251, 239, 145);">
@@ -21,8 +23,8 @@
       <a href = "./pagCategorias.html" id="Promociones" style="color: #000;">Categorías</a>
       <a href = "./promo.html" style="color: #000;">Promociones</a>
       <a href = "./contacto.html" style="color: #000;">Contactos</a>
-      <a href = "./carro.html" id="ComprarLat" style="color: #000;">Carro</a>
-    </div>
+      <a href = "./index.html" id="ComprarLat" style="color: #000;">Carro</a>    
+  </div>
     <!--  -->
     <!-- BARRA DE TITULO PRINCIPAL DE LA PAGINA -->
     <div class="row" id="barra-titulo">
@@ -32,7 +34,7 @@
           <div><img src="./img/bolsaicono.png" alt="bolsita" id="bolsita" width="100" padding="10"></div>          
         </div>
         <div class="logoCar">
-          <a href="/carro.html" style="color:rgb(39, 132, 101);"><img src="./img/carroicono.png" alt="carrocompra" id="carro" width="80" padding="10">Carro</a>
+          <a href="#" style="color:rgb(39, 132, 101);"><img src="./img/carroicono.png" alt="carrocompra" id="carro" width="80" padding="10">Carro</a>
         </div>
       </div> 
       <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="boton-sidenav"><div id="icon-sidenav">&#9776;</div></span>  
@@ -66,55 +68,88 @@
     <!--  -->
   </div>
 
-    <!-- CARRUSEL -->
-    <div class="container" id="carrusel">
-      <div id="carouselExampleInterval" class="carousel slide d-flex justify-content-center align-items-center"
-        data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active caritem" data-bs-interval="6000">
-            <img src="./img/car1.jfif" class="d-block w-100 h-100 img-carrusel" id="imagen" alt="...">
-          </div>
-          <div class="carousel-item caritem" data-bs-interval="6000">
-            <img src="./img/car2.jfif" class="d-block w-100 h-100 img-carrusel" alt="...">
-          </div>
-          <div class="carousel-item caritem" data-bs-interval="6000">
-            <img src="./img/car3.jfif" class="d-block w-100 h-100 img-carrusel
-            " alt="...">
-          </div>
+
+  <div class="fondoCat">
+    <div class="fond">
+      <div class="row">
+        <div class="col-4">
+          <form action="./Electrodomesticos.html" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Electrodomesticos">
+          </form>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="col-4">
+          <form action=".//utiles.html" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Utiles Escolares">
+          </form>
+        </div>
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Belleza">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Calzados">
+          </form>
+        </div>
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Herramientas">
+          </form>
+        </div>
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Arriendos">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Tecnologia">
+          </form>
+        </div>
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Aseo e Higiene">
+          </form>
+        </div>
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Empleos">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Materiales DIY">
+          </form>
+        </div>
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Gasfiteria">
+          </form>
+        </div>
+        <div class="col-4">
+          <form action="" class="bloqueCat">
+            <input type="submit" class="catNombres" value="Servicio Tecnico">
+          </form>
+        </div>
       </div>
     </div>
-    <!--  -->
+  </div>
+      
 
-    <!-- BLOQUE DE INICIO DE SESIÓN -->
-    <div class="col-xs-12" id="InicioSesion">
-      <form class="col-xs-12">
-        <div class="xs-3">
-          <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Recuerdáme</label>
-        </div>
-        <button type="submit" class="btn btn-primary" id="iniciarSesion">Iniciar Sesión</button>
-      </form>
-    </div>
-    <!--  -->
+        
+    
+
+
+
+    
+    
 
 
   </div>
@@ -126,6 +161,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
     integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
     crossorigin="anonymous"></script>
-  </body>
+</body>
 
 </html>

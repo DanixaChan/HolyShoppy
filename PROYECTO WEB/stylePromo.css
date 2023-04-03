@@ -52,7 +52,6 @@ body{
     height: 8vw;
 }
 
-
 .logoCar{
     position: absolute;
     left: 98vw;
@@ -68,42 +67,45 @@ body{
     color: rgba(255,254,138,255);
 }
 
-#carrusel{
-    border-style: solid;
-    border-width: 30px;
-    border-radius: 40px;
-    width: 900px;
-    height: 420px;
-    float: left;
-    display: flex;
-    position: absolute;
-    top: 23.1vw;
-    padding: auto;
-}
 
-.carousel-item {
-    width: 820px;
-    height: 360px;
-}
 
-#InicioSesion{
 
-    block-size: 58%;
-    border-style: solid;
-    border-width: 30px;
-    border-radius: 30px;
-    border-color: rgb(18, 162, 114);
-    background-color: rgb(18, 162, 114);
-    float: right;
-    position: absolute;
-    left: 68%;
-    top: 58.4%;
-    padding-top: 3.5%;
-    padding-right: 5%;
-}
 
 @media screen {
 
+    #PromocionDia{
+        position: relative;
+        left: 15%;
+    }
+
+    #box{
+        width: 93vw;
+        height: 40vw;
+        position: absolute;
+        top: 20vw;
+        left: 3vw;
+        background-color: #fffc68bc;
+        border-style: solid;
+        border-radius: 2vw;
+        border-width: 2vw;
+        border-color: #db7018;
+    }
+    
+    #bPromo1{
+        font-size: 25px;
+        width: 40%;
+        background-color: #fb941e;
+    }
+    #bPromo2{
+        font-size: 25px;
+        width: 40%; 
+        background-color: #fb941e;  
+    }
+    #bPromo3{
+        font-size: 25px;
+        width: 40%;    
+        background-color: #fb941e;
+    }
     #buscador{
         position: relative;
         left: 70vw;
@@ -140,6 +142,25 @@ body{
 
 @media (max-width: 1387px){
 
+    #PromocionDia{
+        position: relative;
+        left: 15%;
+    }
+
+    #box{
+        width: 93vw;
+        height: 55vw;
+        max-height: auto;
+        position: absolute;
+        top: 30vw;
+        left: 3vw;
+        background-color: #fffc68bc;
+        border-style: solid;
+        border-radius: 2vw;
+        border-width: 2vw;
+        border-color: #db7018;
+    }
+    
     #titulo{
         position: relative;
         left: 2vw;
@@ -164,80 +185,38 @@ body{
 
     .logoCar{
         position: absolute;
-        left: 78vw;
-        top: 13vw; 
+        left: 88vw;
+        top: 1vw; 
     }
-
 
     #buscador{
         position: absolute;
     }
-    #carrusel{
-        display: contents;
-        width: 15px;
-    }
-
-    .carousel-inner{
-        width: 200%;
-        position: sticky;
-        top: 15%;
-    }
-
-    .carousel-control-next{
-        position: sticky;
-        right: 8%;
-    }
-
-    .caritem {
-        position: relative;
-        height: 400px;
-        width: 100vw;
-    }
-    #InicioSesion{
-        block-size: 43%;
-        border-style: solid;
-        border-width: 30px;
-        border-radius: 30px;
-        border-color: rgb(18, 162, 114);
-        background-color: rgb(18, 162, 114);
-        float: left;
-        position: absolute;
-        left: 3vw;
-        top: 730.5px;        
-        padding: 2vw;
-        padding-right: 6vw;
-        display: flex;
-    }
-
-    .form-label{
-        width: 75vw;
-        display: flex;
-    }
-
-    #iniciarSesion{
-        font-size: 20px;
-        position: absolute;
-        bottom: -30px;
-        left: 75%;
-    }
 
 }
 
-@media (max-width: 980px) {
-    .logo #bolsita {
+@media (max-width: 985px) {
+    #box{
+        width: 93vw;
+        height: 55vw;
+        max-height: auto;
+        position: absolute;
+        top: 300px;
+        left: 3vw;
+        background-color: #fffc68bc;
+        border-style: solid;
+        border-radius: 2vw;
+        border-width: 2vw;
+        border-color: #db7018;
+    }
+        
+    #navbar-bigger-main{
         display: none;
     }
 
-    #carro{
-        width: 6vw;
+    .logo #bolsita {
+        display: none;
     }
-
-    .logoCar{
-        position: absolute;
-        left: 58vw;
-        top: 19vw; 
-    }
-
 
     #barra-titulo{
         font-size: 2.7vw;
@@ -252,6 +231,19 @@ body{
         top: -10vw;
         left: -15vw;
     }
+
+    #carro{
+        width: 95px;
+    }
+
+    .logoCar{
+        position: absolute;
+        left: 60%;
+        top: 125%; 
+        float: right;
+    }
+
+
 }
 @media (min-width: 413px){
     #ComprarLat{
@@ -260,6 +252,24 @@ body{
 }
 
 @media (max-width: 413px){
+    #PromocionDia{
+        position: relative;
+        left: 25%;
+    }
+    #box{
+        width: 160%;
+        height: 300px;
+        max-height: auto;
+        position: absolute;
+        top: 200px;
+        left: 3vw;
+        background-color: #fffc68bc;
+        border-style: solid;
+        border-radius: 2vw;
+        border-width: 2vw;
+        border-color: #db7018;
+    }
+    
     #boton-sidenav{
         font-size: 100px;
         background-color: rgb(252, 240, 108);
@@ -273,7 +283,7 @@ body{
         display: none;
     }
     #barra-titulo{
-        width: 130%;
+        width: 180%;
         height: 15%;
         font-size: 3vw;
         padding-left: 65px;
@@ -281,27 +291,6 @@ body{
         padding-bottom: 30vw;
     }
 
-    #carrusel{
-        height: 85vw;
-        display: contents;
-        width: 960%;
-    }
-    
-    .carousel-control-next{
-        position: absolute;
-        left: 83vw;
-    }
-    .carousel-inner{
-        width: 500px;
-    }
-    .caritem {
-        height: 400px;
-        width: 100%;
-    }
-    .carousel-item {
-        position: relative;
-        height: 80vw;
-    }
     #InicioSesion{
         block-size: 45%;
         border-style: solid;
@@ -327,16 +316,11 @@ body{
     }
 }
 
-@media (min-width: 1387px) and (max-width: 980px){
+@media (min-width: 1260px){
     #boton-sidenav{
         display: none;
     }
 
-}
-@media (max-width: 981px){
-    #navbar-bigger{
-        display: none;
-    }
 }
 
 #boton-sidenav{

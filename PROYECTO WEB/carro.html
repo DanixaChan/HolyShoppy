@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Shoppy - Promociones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styleCarro.css">
+  <script src="./scripts.js"></script>
+</head>
+
+<body>
+  <!-- BARRA NAVEGACION LATERAL (PANTALLAS MAS PEQUEÑAS) -->
+  <div class="container-fluid">
+    <div id="mySidenav" class="sidenav" style="background-color: rgb(251, 239, 145);">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href = "./index.html" style="color: #000;">Menú</a>
+      <a href = "./pagCategorias.html" id="Promociones" style="color: #000;">Categorías</a>
+      <a href = "./promo.html" style="color: #000;">Promociones</a>
+      <a href = "./contacto.html" style="color: #000;">Contactos</a>
+      <a href = "./index.html" id="ComprarLat" style="color: #000;">Carro</a>
+  </div>
+    <!--  -->
+    <!-- BARRA DE TITULO PRINCIPAL DE LA PAGINA -->
+    <div class="row" id="barra-titulo">
+      <div id="titulo">
+        <h1 class="col" id="tamañotit">HOLY SHOPPY</h1>
+        <div class="logo">
+          <div><img src="./img/bolsaicono.png" alt="bolsita" id="bolsita" width="100" padding="10"></div>
+        </div>
+        <div class="logoCar">
+          <a href="#" style="color:rgb(39, 132, 101);"><img src="./img/carroicono.png" alt="carrocompra" id="carro" width="80" padding="10">Carro</a>
+        </div>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="boton-sidenav">
+        <div id="icon-sidenav">&#9776;</div>
+      </span>
+    </div>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <div id="navbar-bigger-main">
+      <div class="row" id="navbar">
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 242, 142);" id="navbarbg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <button type="button" class="btn btn-primary" id="bMenu" onclick=" ir_menu()">Menú</button>
+            <button type="button" class="btn btn-secondary" id="bCategorias"
+              onclick=" ir_categorias()">Categorías</button>
+            <button type="button" class="btn btn-primary" id="bPromociones"
+              onclick=" ir_promocion()">Promociones</button>
+            <button type="button" class="btn btn-secondary" id="bContactos" onclick=" ir_contactos()">Contactos</button>
+            </ul>
+            <form class="d-flex" id="buscador">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--  -->
+    </div>
+
+
+    <div class="row" id="boxpromo">
+      <div class="col-xs-12">
+        <div id="box">
+          <div class="card" style="width: 18rvw;" id="compracard">
+            <div class="card-body">
+              <img src="/img/lavadora.png" alt="" style="width: 115px;">
+              <h5 class="card-title">Lavadora Samsung 12kg</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Electrodomesticos</h6>
+              <br><br>
+              <button type="button" class="btn btn-secondary" id="bcomprar">Comprar</button>
+              <p class="card-text" style="font-size: 30px;">$25.000</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rvw;" id="compracard">
+            <div class="card-body">
+              
+              <img src="/img/licuadora.png" alt="">
+              <h5 class="card-title">Licuadora CMarca Oster nueva</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Electrodomesticos</h6>
+              <br><br>
+              <button type="button" class="btn btn-secondary" id="bcomprar">Comprar</button>
+              <p class="card-text" style="font-size: 30px;">$25.000</p>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary" id="bcomprartodo">Comprar Todo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

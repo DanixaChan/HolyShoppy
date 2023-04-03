@@ -1,17 +1,33 @@
-// Selecciona el botón de hamburguesa y el menú de navegación
-const button = document.querySelector(".navbar-toggler");
-const menu = document.querySelector(".navbar-collapse");
-
-// Agrega un evento de clic al botón de hamburguesa
-button.addEventListener("click", () => {
-  // Alternar la clase "show" en el menú de navegación
-  menu.classList.toggle("show");
-});
-
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+}
+
+var boton = document.getElementById("bPromociones");
+
+boton.addEventListener("click", function() {
+  window.location.href = "./promo.html";
+});
+
+function ir_menu()
+{
+     location.href = "./index.html";
+}
+
+function ir_promocion()
+{
+     location.href = "./promo.html";
+}
+
+function ir_categorias()
+{
+     location.href = "./pagCategorias.html";
+}
+
+function ir_contactos()
+{
+     location.href = "./contacto.html";
 }
