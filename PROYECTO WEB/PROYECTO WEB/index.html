@@ -32,7 +32,7 @@
           <div><img src="./img/bolsaicono.png" alt="bolsita" id="bolsita" width="100" padding="10"></div>          
         </div>
         <div class="logoCar">
-          <a href="/carro.html" style="color:rgb(39, 132, 101);"><img src="./img/carroicono.png" alt="carrocompra" id="carro" width="80" padding="10">Carro</a>
+          <a href="./carro.html" style="color:rgb(39, 132, 101);"><img src="./img/carroicono.png" alt="carrocompra" id="carro" width="80" padding="10">Carro</a>
         </div>
       </div> 
       <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="boton-sidenav"><div id="icon-sidenav">&#9776;</div></span>  
@@ -51,10 +51,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <button type="button" class="btn btn-primary" id="bMenu" onclick=" ir_menu()">Menú</button>
-          <button type="button" class="btn btn-secondary" id="bCategorias" onclick=" ir_categorias()">Categorías</button>
-          <button type="button" class="btn btn-primary" id="bPromociones" onclick=" ir_promocion()">Promociones</button>
-          <button type="button" class="btn btn-secondary" id="bContactos" onclick=" ir_contactos()">Contactos</button>
+          <button type="button" class="btn btn-primary" id="bMenu" onclick=" ir_menu()"  style="color: #000; font-weight: 700;">Menú</button>
+          <button type="button" class="btn btn-secondary" id="bCategorias" onclick=" ir_categorias()" style="color: #000; font-weight: 700;">Categorías</button>
+          <button type="button" class="btn btn-primary" id="bPromociones" onclick=" ir_promocion()" style="color: #000; font-weight: 700;">Promociones</button>
+          <button type="button" class="btn btn-secondary" id="bContactos" onclick=" ir_contactos()" style="color: #000; font-weight: 700;">Contactos</button>
             </ul>
           <form class="d-flex" id="buscador">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -115,9 +115,18 @@
       </form>
     </div>
     <!--  -->
-
-
+  
   </div>
+  <div class="foot">
+    <div class="footImg">
+      <img src="./img/bolsaicono.png" alt="Bolsita" width="100">
+    </div>
+    <div class="footer-right">
+      <p>Somos Net-Workers puedes ver nuestra informacion de contacto en:</p>
+      <a href="./contacto.html">Contactos</a>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
