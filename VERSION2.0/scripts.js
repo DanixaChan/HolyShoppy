@@ -15,6 +15,7 @@ carrito.addEventListener("mousemove", function () {
   });
 });
 
-function irRegistro(){
-  location.href = "./registro.html"
+//Redireccion de página
+function irRegistro() {
+  location.href = "./registro.html";
 }
