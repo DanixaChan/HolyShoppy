@@ -80,3 +80,16 @@ function mostrarContraConfirmada(){
   document.getElementById('toggle-password2').querySelector('i').classList.toggle('fa-eye');
   document.getElementById('toggle-password2').querySelector('i').classList.toggle('fa-eye-slash');
 }
+
+
+//Registro - Reinicio Animación fa-beat-fade para Botón .regreso-inicio
+let regresoInicio = document.getElementById("regreso-inicio");
+
+regresoInicio.addEventListener("mousemove", function () {
+  $(".fa-beat-fade", this).on("mouseleave", function () {
+    $(this).removeClass("fa-beat-fade");
+  });
+  $(".fa-beat-fade", this).on("mouseenter", function () {
+    $(this).addClass("fa-beat-fade");
+  });
+});

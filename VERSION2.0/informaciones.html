@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>~~ Holy Shoppy ~~</title>
   <!-- CSS CDN'S -->
@@ -10,79 +11,38 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
     integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet"
     type="text/css">
-  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="stylesheet" href="./estilo.css">
   <style>
-    .btn-outline-light {
-      display: grid;
-      justify-content: left;
-      align-items: baseline;
-      margin: 0 0 50px 0;
-      border: 2px solid black;
+    .btn-light {
       background-color: black;
-      color: white;
     }
 
-    .btn-outline-light:hover {
-      border: 2px solid black;
-      background-color: white;
+    .btn-light:hover {
       color: rgb(0, 0, 0);
       font-weight: 500;
     }
 
-    h2{
-      font-size: 45px;
-      text-align: center;
-    }
-
-    #seccionCarro{
-      border: 4px solid rgb(0, 0, 0);
-      
-    }
-
-    #seccionListCarro{
-      background-image: url("img/fondoCarro.jpg");
-      background-size: contain;
-      background-position: center;
+    body{
+      background-image: url(./img/fondo1.jpg);
+      background-size: cover;
       background-repeat: no-repeat;
-      border: 3px solid black;
-      border-radius: 20px;
-      margin: 0 0 300px 0;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
     }
-
-    #cart-items{
-      font-size: 19px;
-      margin: 0 0 100px 20px; 
-    }
-
-    #cart-items li{
-      border: 2px solid rgba(0, 0, 0, 0.551);
-      border-radius: 20px;
-      margin: 30px 40px 30px 0;
-      padding: 1%;
-      backdrop-filter: blur(3px);
-      background-color: rgba(232, 232, 232, 0.407);
-    }
-
-    #total-price{
-      margin: 0 0 30px 60px;
-      font-size: 25px;
-    }
-    
   </style>
-
-</head>
 
 <body>
   <!-- NAVBAR -->
   <header>
     <nav class="navbar navbar-expand-lg" style="background-color: black;">
       <div class="container-fluid">
-        <a class="navbar-brand mx-4" style="color:white; font-size: 40px; text-decoration: none;"
-          href="./index.html">Holy
-          Shoppy</a>
+        <a class="navbar-brand mx-4" style="color:white; font-size: 40px; text-decoration: none;" href="#">Holy Shoppy</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"><i class="fas fa-bars fa-lg" style="color:white;"></i></span>
@@ -107,21 +67,31 @@
       </div>
     </nav>
   </header>
-
-  <div class="container-fluid" id="seccionCarro">
-    <div>
-      <h2>Carrito de compras</h2>
-    </div>
-    <div id="seccionListCarro">
-      <ul id="cart-items">
-      </ul>
-      <div>
-        <p id="total-price">Precio total: $0</p>
-      </div>
-  
-    </div>
+  <div class="container-fluid">
+    <h1 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 250%;">Informaciones</h1>
+    <br>
+    <h3 class="titulos">¿Quienes sómos?</h3>
+    <p class="info">Somos Holy Shoppy, nos dedicamos a conectar vendedores y compradores de todas las partes de chile, los vendedores pueden publicar 
+      todos los productos que gusten siempre y cuando no tengan problemas con nuestros terminos y condiciones</p>
+      <i class="fa-sharp fa-solid fa-user fa-beat fa-2xl" style="color: #00a868;"></i>
+    <br>
+    <h3 class="titulos">¿Como publico un producto?</h3>
+    <p class="info">Debes iniciar sesion en tu cuenta de Holy Shoppy, luego puedes dar click en el boton de publicar ubicado en la parte superior derecha de la pagina,
+      llena los datos sobre el producto que quieres publicar indicando caracteristicas, precio, etc, da en el boton de finalizar publicacion y ya estara tu producto para ser comprado por
+      otro usuario. (recordar ver el apartado de como hacer el envio de tu producto).
+    </p>
+    <i class="fa-brands fa-shopify fa-beat fa-2xl" style="color: #0050db;"></i>
+    <br>
+    <h3 class="titulos">¿Se puede reembolsar?</h3>
+    <p class="info">Holy Shoppy si permite reembolso, sin embargo, la solicitud solo estara permitida solo si esta dentro de nuestros terminos y condiciones.
+      Para reembolsar, ve al apartado de cuenta, presiona en "pedir reembolso", rellena el apartado dandonos la razon de la solicitud y adjunta
+      documentos (en el caso de tener). Inicialmente Holy Shoppy revisara tu solicitud y te mandara una respuesta a tu cuenta y correo.
+    </p>
+    <i class="fa-light fa-coins fa-beat fa-2xl" style="color: #703de6;"></i>
   </div>
-
+  
+  
+  </div>
   <footer class="pie-pagina">
     <div class="grupo-1">
         <div class="box">
@@ -156,63 +126,10 @@
         <small>&copy; 2023 <b>NetWorkers </b> - Todos los Derechos Reservados.</small>
       </div>
   </footer>
+  <script>console.log("hola mundo")</script>
+
 
   <!-- SCRIPTS FRAMEWORKS -->
-  <script>
-    // Obtén el elemento de la lista del carrito
-    const cartList = document.getElementById('cart-items');
-    const totalPriceElement = document.getElementById('total-price');
-    const refreshButton = document.getElementById('refresh-button');
-
-    // Obtén los elementos del carrito almacenados en el almacenamiento local
-    const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
-
-    let total = 0;
-
-    // Itera sobre los elementos del carrito y crea elementos de lista para mostrarlos en el HTML
-    cartItems.forEach((item, index) => {
-      const listItem = document.createElement('li');
-      listItem.textContent = `${item.title} - ${item.price}`;
-      total+=extractNumberFromString(item.price);
-      console.log(total);
-      const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Eliminar';
-      deleteButton.classList.add('btn', 'btn-outline-light');
-      deleteButton.addEventListener('click', () => {
-        deleteFromCart(index);
-        listItem.remove();
-        location.reload();
-      });
-
-      // Almacena el índice como una propiedad del elemento de lista
-      listItem.dataset.index = index;
-
-      listItem.appendChild(deleteButton);
-      cartList.appendChild(listItem);
-      totalPriceElement.textContent = 'Precio total: $'+total;
-    });
-
-    function deleteFromCart(index) {
-      // Obtén los elementos del carrito almacenados en el almacenamiento local
-      const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
-
-      // Elimina el producto del carrito en la posición dada
-      cartItems.splice(index, 1);
-
-      // Actualiza los elementos del carrito en el almacenamiento local
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    }
-
-    function extractNumberFromString(str) {
-    // Elimina los caracteres que no sean números utilizando una expresión regular
-    const numberStr = str.replace(/[^0-9]/g, '');
-
-    // Convierte la cadena en un número decimal (float)
-    const number = parseFloat(numberStr);
-
-    return number;
-    }
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
@@ -223,9 +140,7 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <!-- SCRIPT MI JAVASCRIPT -->
-  <script src="./js/carro.js"></script>
-  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-
+  <script src="./scripts.js"></script>
 </body>
 
 </html>

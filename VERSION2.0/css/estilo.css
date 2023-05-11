@@ -38,7 +38,6 @@
     animation-direction: normal;
 }
 
-
 /* En pantallas moviles, titulo ajustado y navbar como sidenav */
 /* ---------------------------------------------- */
 @media (max-width: 768px) {
@@ -173,6 +172,19 @@ label:has(+ input:focus, + select:focus) {
 .valid-feedback{
     background-color: rgba(204, 254, 190, 0.756)
 }
+/* Animación icono regreso-inicio */
+.fa-beat-fade {
+    animation-duration: 1s;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.fa-beat-fade:hover {
+    animation-play-state: running;
+    animation-direction: normal;
+}
+
+
 /* --------------------------------------------- */
 /* Carro.HTML */
 #lista-carro{
@@ -182,6 +194,21 @@ label:has(+ input:focus, + select:focus) {
 
 .list-group-item{
     border: 1px solid rgba(0, 0, 0, 0.773);
+}
+/* --------------------------------------------- */
+
+/* INFORMACIONES */
+
+.titulos{
+    font-size: 200%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.info{
+font-size: 110%;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
 }
 
 /* --------------------------------------------- */
