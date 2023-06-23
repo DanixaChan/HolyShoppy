@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Shoppy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <script src = "./scripts.js"></script>
+</head>
+
+<body>
+  <!-- BARRA NAVEGACION LATERAL (PANTALLAS MAS PEQUEÑAS) -->
+  <div class="container-fluid">
+    <div id="mySidenav" class="sidenav" style="background-color: rgb(251, 239, 145);">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href = "./index.html" style="color: #000;">Menú</a>
+      <a href = "./pagCategorias.html" id="Promociones" style="color: #000;">Categorías</a>
+      <a href = "./promo.html" style="color: #000;">Promociones</a>
+      <a href = "./contacto.html" style="color: #000;">Contactos</a>
+      <a href = "./carro.html" id="ComprarLat" style="color: #000;">Carro</a>
+    </div>
+    <!--  -->
+    <!-- BARRA DE TITULO PRINCIPAL DE LA PAGINA -->
+    <div class="row" id="barra-titulo">
+      <div id="titulo">
+        <h1 class="col" id="tamañotit">HOLY SHOPPY</h1>
+        <div class="logo">
+          <div><img src="./img/bolsaicono.png" alt="bolsita" id="bolsita" width="100" padding="10"></div>          
+        </div>
+        <div class="logoCar">
+          <a href="./carro.html" style="color:rgb(39, 132, 101);"><img src="./img/carroicono.png" alt="carrocompra" id="carro" width="80" padding="10">Carro</a>
+        </div>
+      </div> 
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="boton-sidenav"><div id="icon-sidenav">&#9776;</div></span>  
+    </div>
+
+
+    
+
+    <!-- BARRA DE NAVEGACIÓN -->
+<div id="navbar-bigger">
+    <div class="row" id="navbar">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 242, 142);" id="navbarbg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <button type="button" class="btn btn-primary" id="bMenu" onclick=" ir_menu()"  style="color: #000; font-weight: 700;">Menú</button>
+          <button type="button" class="btn btn-secondary" id="bCategorias" onclick=" ir_categorias()" style="color: #000; font-weight: 700;">Categorías</button>
+          <button type="button" class="btn btn-primary" id="bPromociones" onclick=" ir_promocion()" style="color: #000; font-weight: 700;">Promociones</button>
+          <button type="button" class="btn btn-secondary" id="bContactos" onclick=" ir_contactos()" style="color: #000; font-weight: 700;">Contactos</button>
+            </ul>
+          <form class="d-flex" id="buscador">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--  -->
+  </div>
+
+    <!-- CARRUSEL -->
+    <div class="container" id="carrusel">
+      <div id="carouselExampleInterval" class="carousel slide d-flex justify-content-center align-items-center"
+        data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active caritem" data-bs-interval="6000">
+            <img src="./img/car1.jfif" class="d-block w-100 h-100 img-carrusel" id="imagen" alt="...">
+          </div>
+          <div class="carousel-item caritem" data-bs-interval="6000">
+            <img src="./img/car2.jfif" class="d-block w-100 h-100 img-carrusel" alt="...">
+          </div>
+          <div class="carousel-item caritem" data-bs-interval="6000">
+            <img src="./img/car3.jfif" class="d-block w-100 h-100 img-carrusel
+            " alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!--  -->
+
+    <!-- BLOQUE DE INICIO DE SESIÓN -->
+    <div class="col-xs-12" id="InicioSesion">
+      <form class="col-xs-12">
+        <div class="xs-3">
+          <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Recuerdáme</label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="iniciarSesion">Iniciar Sesión</button>
+      </form>
+    </div>
+    <!--  -->
+  
+  </div>
+  <div class="foot">
+    <div class="footImg">
+      <img src="./img/bolsaicono.png" alt="Bolsita" width="100">
+    </div>
+    <div class="footer-right">
+      <p>Somos Net-Workers puedes ver nuestra informacion de contacto en:</p>
+      <a href="./contacto.html">Contactos</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
+  </body>
+
+</html>
