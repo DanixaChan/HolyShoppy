@@ -1,6 +1,3 @@
 CAMBIOS:
--CARPETA "Proyecto con Django 2.1" agregado!
--CREACIÓN DE USUARIOS EXITOSO! 100%
-(Create user CRUD Complete!)
-
-NOTA: V2.0 NO SE GRABABAN METODOS DE PAGO A LA BD, V2.1 ESTA RESUELTO!
+-CARPETA "Proyecto con Django 3.0 FV" agregado!
+-CRUD COMPLETADO PARA USUARIOS!
