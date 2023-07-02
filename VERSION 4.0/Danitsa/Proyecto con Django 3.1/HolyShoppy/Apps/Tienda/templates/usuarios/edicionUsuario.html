@@ -1,0 +1,161 @@
+{% extends './baseEdit.html' %}
+{% load static %}
+{% block title %}HolyShoppy{% endblock %}
+{% block style %}
+<style>
+  body {
+    background-image: url("{% static './img/fondo1.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn-light {
+    background-color: black;
+  }
+
+  a{
+    color: #ffffff;
+  }
+  a:hover{
+    color: #000000;
+  }
+  .btn-light:hover {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+  }
+
+  .invalid-feedback,
+  .is-invalid {
+    background-color: rgba(255, 255, 255, 0.186)
+  }
+
+  #errorPassword-btn {
+    background-color: rgba(255, 220, 45, 0.466);
+    color: rgba(255, 255, 255, 0.466);
+  }
+
+  #errorPassword-btn:hover {
+    background-color: rgba(255, 213, 0, 0.955);
+    color: rgba(255, 0, 0, 0.955);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  form{
+    background-color: black;
+    color: #e0dfff;
+    border: 15px solid rgb(26, 26, 26);
+    border-radius: 12px;
+  }
+
+  .mb-3{
+    background-color: rgb(28, 28, 28);
+    color: #e0dfff;
+    border: 5px solid rgb(82, 82, 82);
+    border-radius: 12px;
+    padding: 2%;
+  }
+
+  .mb-3 label{
+    margin-right: 8vw;
+  }
+
+  .mb-3 input{
+    width: auto!important;
+    display: block;
+    justify-content: right;
+    margin-right: 4vw;
+  }
+
+  .labelfix{
+    padding-right: 5vw;
+  }
+
+  .labelfix2{
+    padding-right: 3vw;
+  }
+
+  .confirm{
+    padding: 3%;
+    margin: 9.5%;
+    justify-content: space-between;
+  }
+  
+</style>
+{% endblock %}
+
+<body>
+  {% block body %}
+    <!-- INICIO SESIÓN -->
+    <div class="container-flex justify-content-center" id="container-session">
+        <form class="col-auto" method="POST" action="/UsuarioEdit/{{usuario.form_user}}/" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="mb-3">
+              <label for="form_user" class="form-label labelfix2">Username: </label>
+              <input type="input" class="form-control" id="form_user" name="form_user" aria-describedby="UserHelp" value="{{usuario.form_user}}">
+              <div id="UserHelp" class="form-text">Campo de nombre de usuario</div>
+            </div>
+            <div class="mb-3">
+                <label for="form_password" class="form-label labelfix2">Password: </label>
+                <input type="password" class="form-control" id="form_password" name="form_password" aria-describedby="PassHelp"  value="{{usuario.form_password}}">
+                <div id="PassHelp" class="form-text">Campo de contraseña</div>
+            </div>
+            <div class="mb-3">
+              <label for="form_direction" class="form-label labelfix">Email: </label>
+              <input type="input" class="form-control" id="form_direction" name="form_direction" aria-describedby="DirectionHelp" value="{{usuario.form_direction}}">
+              <div id="DirectionHelp" class="form-text">Campo de Dirección</div>
+          </div>
+            <div class="mb-3">
+                <label for="form_correo" class="form-label labelfix">Email: </label>
+                <input type="email" class="form-control" id="form_correo" name="form_correo" aria-describedby="EmailHelp" value="{{usuario.form_correo}}">
+                <div id="EmailHelp" class="form-text">Campo de correo electrónico</div>
+            </div>
+            <div class="mb-3">
+                <label for="form_birthday" class="form-label">Fecha de Nacimiento: </label>
+                <input type="date" class="form-control" id="form_birthday" name="form_birthday" value="{{usuario.form_birthday|date:'Y-m-d'}}">
+            </div>
+            <div class="mb-3 campo">
+                <label for="form_payment_card">Método de Pago&nbsp;&nbsp;&nbsp;<i
+                        class="fa-brands fa-cc-visa fa-xl" style="color: #e0dfff;">&nbsp;</i><i
+                        class="fa-brands fa-cc-mastercard fa-xl" style="color: #fccabd;"></i>
+                </label>
+                <select class="form-control" id="form_payment_card" name="form_payment_card"
+                    style="font-weight: 300;" required>
+                    <option value="">ACTUAL: {{usuario.form_payment_card}}</option>
+                    {% if pagos %}
+                    {% for metodo in pagos %}
+                        <option value="{{ metodo.form_payment_card }}">{{ metodo.form_payment_card }}</option>
+                    {% endfor %}
+                    {% else %}
+                        <option value="">No hay opciones disponibles</option>
+                    {% endif %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-light confirm">Confirmar</button>
+          </form>
+    </div>
+  {% endblock %}
+  <!-- SCRIPTS FRAMEWORKS -->
+  {% include 'scriptsBase.html' %}
+  <!-- SCRIPT MI JAVASCRIPT -->
+  {% block scripts %}
+  <script src="{% static 'js/scripts' %}""></script>
+  <script src="{% static 'js/validacionIS.js' %}"></script>
+  <script>
+    // Activación popover - error de Password
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+  </script>
+  {% endblock %}
+  <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
