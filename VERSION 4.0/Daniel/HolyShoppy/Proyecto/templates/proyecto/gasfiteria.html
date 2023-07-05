@@ -1,0 +1,102 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block body %}
+  <div class="container-fluid">
+    <h1 class="tit">UTILES ESCOLARES</h1> 
+    <div class="row">
+      {% for x in productos %}
+      <div class="col-sm-12 col-md-6 col-lg-4 epa">
+        <div class="producto">
+          {% if x.imagen %}
+                   <img src="{{ x.imagen.url }}" width="300px">
+           {% endif %}
+          <h2 class="title">{{x.nombre}}</h2>
+          <p class="price">${{x.precio}}</p>
+          <p>{{x.descripcion}}</p>
+          <p>Stock: {{x.stock}}</p>
+          <button class="buy-btn" data-price="60000">Comprar</button>
+        </div>
+      </div>
+      {% endfor %}
+
+    <script> 
+      
+      const moneda = document.getElementById('boxMoneda');
+      const productos = document.getElementsByClassName('producto') 
+
+    function calculate() {
+      const monedaSeleccionada = moneda.value;
+
+    fetch(`https://api.exchangerate-api.com/v4/latest/${monedaSeleccionada}`)
+      .then(res => res.json())
+      .then(data => {
+        const rates = data.rates;
+        const tasaDeCambio = rates.CLP; // Obtiene la tasa de cambio para CLP
+
+        for (const element of productos) {
+          const producto = element;
+          const precioOriginal = parseFloat(producto.querySelector('button.buy-btn').getAttribute('data-price'));
+          const precioCLP = precioOriginal;
+
+          // Calcula el nuevo precio en la moneda seleccionada
+          const nuevoPrecio = (precioCLP / tasaDeCambio).toFixed(2);
+
+          // Actualiza el precio en la página
+          producto.querySelector('p').textContent = `$${nuevoPrecio} ${monedaSeleccionada}`;
+        }
+      });
+  }
+
+    moneda.addEventListener('change', function() {
+      if (moneda.value !== 'CLP') {
+        calculate();
+      }
+  });
+</script>
+
+<script>
+               // Obtén todos los botones de "Agregar al carrito"
+               const addToCartButtons = document.querySelectorAll('.buy-btn');
+
+// Itera sobre cada botón y agrega un evento de click
+addToCartButtons.forEach(button => {
+button.addEventListener('click', addToCart);
+});
+
+// Función que se ejecuta cuando se hace clic en un botón de "Agregar al carrito"
+function addToCart(event) {
+// Obtén los datos del producto actual
+const product = event.target.closest('.producto');
+const title = product.querySelector('.title').textContent;
+const price = product.querySelector('.price').textContent;
+
+// Crea un objeto con los datos del producto
+const item = { title, price };
+
+// Obtiene los elementos del carrito almacenados en el almacenamiento local
+const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+cartItems.push(item);
+
+// Guarda los elementos del carrito en el almacenamiento local
+localStorage.setItem('cartItems', JSON.stringify(cartItems));
+updateTotalPrice();
+}
+function updateTotalPrice() {
+    const totalPriceElement = document.getElementById('total-price');
+    let totalPrice = 0;
+
+    // Recorre los productos en el carrito y suma sus precios
+    for (const element of cart) {
+        totalPrice += element;
+    }
+
+    // Actualiza el precio total en la página
+    totalPriceElement.textContent = `Total: $${totalPrice}`;
+}
+
+</script>
+</div>
+</div>
+
+{% endblock %}
