@@ -114,71 +114,12 @@
           harum dicta facere. Lorem ipsum dolor sit!</p>
         <iframe src='https://my.spline.design/piglook3copycopy-f2a446fb1c4f2a8181b0a8ec314d0555/' title="spline_1"
           width='100%' height='100%'></iframe>
-        <div class="container-lg">
-          <div>
-            <ul>
-              <li>
-                <div class="card" style="width: 18rem;">
-                  <img src="./img/batidora.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Batidora Marca KitchenAid</p>
-                    <p class="card-text">Precio $100.000 CLP</p>
-                    <a href="" class="btn btn-primary">COMPRAR</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <div class="card" style="width: 18rem;">
-                  <img src="./img/batidora.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Batidora Marca KitchenAid</p>
-                    <p class="card-text">Precio $100.000 CLP</p>
-                    <a href="" class="btn btn-primary">COMPRAR</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
       <div class="row-4 flex-column">
         <div class="col-lg-4 my-0 px-2 py-2" id="inicioSesion">
           <form action="index.html" enctype="multipart/form-data" method="GET" id="form-session"
             class="container-md needs-validation" novalidate>
             {% csrf_token %}
-            <div class="my-4">
-              <label style="font-size: 25px; ">
-                <i class="fa-sharp fa-solid fa-user fa-lg" style="color: #ffffff;""></i>&nbsp;&nbsp;Inicio Sesión</label>
-            </div>
-            <div class=" mb-3">
-                  <label for="form_user">Nombre de Usuario :</label>
-                  <input class="form-control form-floating" type="text" name="form_user" id="form_user"
-                    pattern="(([a-zA-Z0-9 ._-]{6,20}))" required>
-                  <div class="valid-feedback text-center">
-                    Excelente! 👍
-                  </div>
-                  <div class="invalid-feedback text-center">
-                    Debe colocar un nombre de usuario (minimo 6 carácteres)
-                  </div>
-            </div>
-            <div class="mb-3">
-              <label for="form_password">Contraseña :</label>
-              <input class="form-control form-floating" type="password" name="form_password" id="form_password"
-                pattern="(([A-Z]{1}[a-z]{1}[a-zA-Z0-9._-]{8,23})|([a-zA-Z0-9._-]{8,25}[A-Z]{1}[a-z]{1}[0-9]{1,13})|([a-zA-Z0-9._-]{8,25}[A-Z]{1}[a-z]{1}))"
-                required>
-              <div class="invalid-feedback text-center">
-                <button type="button" id="errorPassword-btn" class="btn btn-outline-warning" data-bs-container="body"
-                  data-bs-toggle="popover" data-bs-placement="right"
-                  data-bs-content="Debe colocar una Contraseña con las sgtes. condiciones: Que contenga al menos 6 carácteres Que contenga al menos una mayúscula y una minúscula Que contenga al menos un número o carácter especial (. ; : _ -)">
-                  <i class="fa-solid fa-diamond-exclamation"></i>
-                </button>
-              </div>
-            </div>
-            <div class="mb-4">
-              <button type="submit" class="btn btn-light">Iniciar Sesión</button>
-            </div>
             <div class="mb-0">
               <label style="margin:2% -11%; font-size:18px ; font-weight: 600;">Eres nuevo?&nbsp;&nbsp;
                 <i class="fa-sharp fa-solid fa-arrow-right fa-fade fa-lg" style="color: #ffffff;"></i>&nbsp;</label>
