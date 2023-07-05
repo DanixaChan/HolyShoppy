@@ -1,0 +1,30 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block body %}
+  <div class="container-fluid" style="padding-bottom: 10%; padding-top: 3%;">
+    <div>
+        <h1 style="text-align: center;">Categorias</h1>
+    </div>
+      <div class="row categorias" style="justify-content: center;">
+        <a class="col" href="{% url 'Electrodomesticos' %}">Electrodomesticos</a>
+        <a class="col" href="{% url 'utilesEscolares' %}">Utiles Escolares</a>
+        <a class="col" href="{% url 'belleza' %}">Belleza</a>
+    </div>
+    <div class="row categorias" style="justify-content: center;">
+        <a class="col" href="{% url 'calzado' %}">Calzado</a>
+        <a class="col" href="{% url 'herramientas' %}">Herramientas</a>
+        <a class="col" href="{% url 'arriendo' %}">Arriendo</a>
+    </div>
+    <div class="row categorias" style="justify-content: center;">
+        <a class="col" href="{% url 'aseo' %}">Aseo e Higiene</a>
+        <a class="col" href="{% url 'tecnologia' %}">Tecnología</a>
+        <a class="col" href="{% url 'empleo' %}">Empleo</a>
+    </div>
+    <div class="row categorias" style="justify-content: center;">
+        <a class="col" href="{% url 'materialesDIY' %}">Materiales DIY</a>
+        <a class="col" href="{% url 'gasfiteria' %}">Gasfiteria</a>
+        <a class="col" href="{% url 'servicioTecnico' %}">Servicio Tecnico</a>
+    </div>
+  </div>
+{% endblock %}
