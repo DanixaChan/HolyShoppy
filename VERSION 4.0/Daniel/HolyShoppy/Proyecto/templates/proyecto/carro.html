@@ -1,0 +1,135 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block body %}
+
+<style>
+  .btn-outline-light {
+    display: grid;
+    justify-content: left;
+    align-items: baseline;
+    margin: 0 0 50px 0;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+  }
+
+  .btn-outline-light:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+  }
+
+  h2{
+    font-size: 45px;
+    text-align: center;
+  }
+
+  #seccionCarro{
+    border: 4px solid rgb(0, 0, 0);
+
+  }
+
+  #seccionListCarro{
+    background-image: url("{% static 'img/fondoCarro.jpg' %}");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 0 0 300px 0;
+  }
+
+  #cart-items{
+    font-size: 19px;
+    margin: 0 0 100px 20px; 
+  }
+
+  #cart-items li{
+    border: 2px solid rgba(0, 0, 0, 0.551);
+    border-radius: 20px;
+    margin: 30px 40px 30px 0;
+    padding: 1%;
+    backdrop-filter: blur(3px);
+    background-color: rgba(232, 232, 232, 0.407);
+  }
+
+  #total-price{
+    margin: 0 0 30px 60px;
+    font-size: 25px;
+  }
+
+</style>
+
+  <div class="container-fluid" id="seccionCarro">
+    <div>
+      <h2>Carrito de compras</h2>
+    </div>
+    <div id="seccionListCarro">
+      <ul id="cart-items">
+      </ul>
+      <div>
+        <p id="total-price">Precio total: $0</p>
+      </div>
+  
+    </div>
+  </div>
+
+  <!-- SCRIPTS FRAMEWORKS -->
+  <script>
+    // Obtén el elemento de la lista del carrito
+    const cartList = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    const refreshButton = document.getElementById('refresh-button');
+
+    // Obtén los elementos del carrito almacenados en el almacenamiento local
+    const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+
+    let total = 0;
+
+    // Itera sobre los elementos del carrito y crea elementos de lista para mostrarlos en el HTML
+    cartItems.forEach((item, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item.title} - ${item.price}`;
+      total+=extractNumberFromString(item.price);
+      console.log(total);
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Eliminar';
+      deleteButton.classList.add('btn', 'btn-outline-light');
+      deleteButton.addEventListener('click', () => {
+        deleteFromCart(index);
+        listItem.remove();
+        location.reload();
+      });
+
+      // Almacena el índice como una propiedad del elemento de lista
+      listItem.dataset.index = index;
+
+      listItem.appendChild(deleteButton);
+      cartList.appendChild(listItem);
+      totalPriceElement.textContent = 'Precio total: $'+total;
+    });
+
+    function deleteFromCart(index) {
+      // Obtén los elementos del carrito almacenados en el almacenamiento local
+      const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+
+      // Elimina el producto del carrito en la posición dada
+      cartItems.splice(index, 1);
+
+      // Actualiza los elementos del carrito en el almacenamiento local
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+
+    function extractNumberFromString(str) {
+    // Elimina los caracteres que no sean números utilizando una expresión regular
+    const numberStr = str.replace(/[^0-9]/g, '');
+
+    // Convierte la cadena en un número decimal (float)
+    const number = parseFloat(numberStr);
+
+    return number;
+    }
+  </script>
+{% endblock %}

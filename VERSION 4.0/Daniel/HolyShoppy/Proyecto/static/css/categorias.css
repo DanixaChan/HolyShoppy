@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+    .categorias {
+        flex-direction: column;
+    }
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-between;
+    background-color: #cccccc9e;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+}
+  
+  .categorias a {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #212121;
+    text-decoration: none;
+}
+  
+  .categorias a:hover {
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
